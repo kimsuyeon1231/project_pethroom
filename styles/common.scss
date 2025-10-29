@@ -23,65 +23,68 @@ $color-darkgray:#313131;
 
 
 @mixin flex-row{
-    display: flex; flex-flow: row nowrap; align-items: center; justify-content: space-between;
+    display: flex; flex-flow: row nowrap; align-items: center; 
 }
 @mixin flex-col{
     display: flex; flex-flow: column nowrap; align-items: center;
 }
+@mixin width100 {width: 100%; overflow: hidden;}
 
 
 
 body{ max-width: 1920px;
-    header { background-color: $color-point; height: 49px; @include flex-row; padding: 0 96px;
+    header { background-color:$color-point;
             position: fixed; z-index: 999; width: 100%;
-        h1 {
-            a { 
-                color: $color-white;
-                font-size: $font-size24; font-weight: $font-width-bold;
-            }
-        }
-        .h_right { @include flex-row; gap: 25px;
-            a:first-of-type { display: inline-block; background-color: $color-white;
-                border-radius: 20px; padding: 3px 10px; @include flex-row;
-                img {width: 15px; display: block;}
-                span { color: $color-point; font-size: $font-size12; font-weight: $font-width-mediun;}
+        #logo {@include flex-row; justify-content: space-between; height: 49px; padding: 10px 96px;
+            h1 {
+                a { 
+                    color: $color-white;
+                    font-size: $font-size24; font-weight: $font-width-bold;
                 }
-            .header_icon {width: 20px; height: 20px; display: inline-block;
-                img {width: 100%;}
             }
+            .h_right { @include flex-row; gap: 25px;
+                a:first-of-type { display: inline-block; background-color: $color-white;
+                    border-radius: 20px; padding: 3px 10px; @include flex-row;
+                    img {width: 15px; display: block;}
+                    span { color: $color-point; font-size: $font-size12; font-weight: $font-width-mediun;}
+                    }
+                .header_icon {width: 20px; height: 20px; display: inline-block;
+                    img {width: 100%;}
+                }
+            }    
         }
+        nav { position: fixed; z-index: 999; background:$color-white; width: 100%; top: 49px;
+            .gnb { display: flex; gap: 80px; padding: 5px 96px; border-bottom: 1px solid #dadada;
+                > li {position: relative;
+                > a { font-weight: $font-width-semibold;
+                    display: block;
+                    padding: 10px 20px;   // 클릭 영역
+                    line-height: 1;       // 텍스트 정렬
+                    }
+                > .lnb {
+                    position: absolute; top: 100%; z-index: 998;
+                    min-width: 100%; background: #fff;
+                    /* 부드러운 표시/숨김 */
+                    opacity: 0;
+                    transition: opacity .15s ease, transform .15s ease, visibility 0s linear .10s; // 숨길 때만 지연
+                    > li {
+                    > a {
+                        display: block; padding:0 10px 0 ; margin:20px 20px; font-size: $font-size14;
+                        white-space: nowrap; //자동 줄바꿈 방지
+                        }
+                    }
+                        }
+                &:hover > .lnb,
+                &:focus-within > .lnb {
+                    opacity: 1; visibility: visible; transform: translateY(0);
+                    transition:
+                    opacity .15s ease, transform .15s ease, visibility 0s;
+                    pointer-events: auto;
+                }
+                }
+            }
+                }
     }
-    nav { position: fixed; z-index: 999; background: #fff; width: 100%; top: 49px;
-        .gnb { display: flex; gap: 80px; padding: 5px 96px; border-bottom: 1px solid #dadada;
-            > li {position: relative;
-            > a { font-weight: $font-width-semibold;
-                display: block;
-                padding: 10px 20px;   // 클릭 영역
-                line-height: 1;       // 텍스트 정렬
-                }
-            > .lnb {
-                position: absolute; top: 100%; z-index: 998;
-                min-width: 100%; background: #fff;
-                /* 부드러운 표시/숨김 */
-                opacity: 0;
-                transition: opacity .15s ease, transform .15s ease, visibility 0s linear .10s; // 숨길 때만 지연
-                > li {
-                > a {
-                    display: block; padding:0 10px 0 ; margin:20px 20px; font-size: $font-size14;
-                    white-space: nowrap; //자동 줄바꿈 방지
-                    }
-                }
-                    }
-            &:hover > .lnb,
-            &:focus-within > .lnb {
-                opacity: 1; visibility: visible; transform: translateY(0);
-                transition:
-                opacity .15s ease, transform .15s ease, visibility 0s;
-                pointer-events: auto;
-            }
-            }
-        }
-            }
     main {
         .control {@include flex-col; position: fixed; z-index: 999; top: 720px; right: 10px; gap: 15px;
             button {width: 35px;
@@ -91,6 +94,6 @@ body{ max-width: 1920px;
                 img {width: 100%;}
             }
         }
-    }
+    }    
     }
 

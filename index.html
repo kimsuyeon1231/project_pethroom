@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
@@ -19,60 +19,62 @@
 </head>
 <body>
     <header>
-        <h1 class="logo"><a href="./index.html">PETHROOM</a></h1>
-        <div class="h_right">
-            <a href="#"><img src="./images/index/1004.png" alt="1004"><span>PETHROOM1004</span></a>
-            <a href="#" class="header_icon"><img src="./images/index/search.png" alt="검색"></a>
-            <a href="#" class="header_icon"><img src="./images/index/mypage.png" alt="마이페이지"></a>
-            <a href="#" class="header_icon"><img src="./images/index/cart.png" alt="장바구니"></a>
+        <div id="logo">
+            <h1 class="logo"><a href="./index.html">PETHROOM</a></h1>
+            <div class="h_right">
+                <a href="#"><img src="./images/index/1004.png" alt="1004"><span>PETHROOM1004</span></a>
+                <a href="#" class="header_icon"><img src="./images/index/search.png" alt="검색"></a>
+                <a href="#" class="header_icon"><img src="./images/index/mypage.png" alt="마이페이지"></a>
+                <a href="#" class="header_icon"><img src="./images/index/cart.png" alt="장바구니"></a>
+            </div>    
         </div>
+        <nav>
+            <ul class="gnb">
+                <li class="product_g"><a href="#">PRODUCT</a>
+                    <ul class="lnb">
+                        <li><a href="#">ALL</a></li>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">BEST</a></li>
+                        <li><a href="#">정기배송</a></li>
+                        <li><a href="#">목욕</a></li>
+                        <li><a href="#">미용&케어</a></li>
+                        <li><a href="#">헬스케어</a></li>
+                        <li><a href="#">홈&리빙</a></li>
+                        <li><a href="#">산책&놀이</a></li>
+                        <li><a href="#">간식&영양제</a></li>
+                        <li><a href="#">의류</a></li>
+                        <li><a href="#">SPECIAL SET</a></li>
+                        <li><a href="#">COLLABO</a></li>
+                        <li><a href="#">SMART ROBOT (IOT)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">MEMBERSHIP</a>
+                    <ul class="lnb">
+                        <li><a href="#">VIP CENTER</a></li>
+                        <li><a href="#">VIP MALL</a></li>
+                        <li><a href="#">MEMBERSHIP</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ABOUT</a>
+                    <ul class="lnb">
+                        <li><a href="#">MISSION</a></li>
+                        <li><a href="#">OUR VIDEO</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">COMMUNITY</a>
+                    <ul class="lnb">
+                        <li><a href="#">NOTICE</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">PARTNERSHIP</a></li>
+                        <li><a href="#">COLLABORATION</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">EVENT</a></li>
+                <li><a href="#">GLOBAL</a></li>
+            </ul>    
+        </nav>
     </header>
-    <nav>
-        <ul class="gnb">
-            <li class="product_g"><a href="#">PRODUCT</a>
-                <ul class="lnb">
-                    <li><a href="#">ALL</a></li>
-                    <li><a href="#">NEW</a></li>
-                    <li><a href="#">BEST</a></li>
-                    <li><a href="#">정기배송</a></li>
-                    <li><a href="#">목욕</a></li>
-                    <li><a href="#">미용&케어</a></li>
-                    <li><a href="#">헬스케어</a></li>
-                    <li><a href="#">홈&리빙</a></li>
-                    <li><a href="#">산책&놀이</a></li>
-                    <li><a href="#">간식&영양제</a></li>
-                    <li><a href="#">의류</a></li>
-                    <li><a href="#">SPECIAL SET</a></li>
-                    <li><a href="#">COLLABO</a></li>
-                    <li><a href="#">SMART ROBOT (IOT)</a></li>
-                </ul>
-            </li>
-            <li><a href="#">MEMBERSHIP</a>
-                <ul class="lnb">
-                    <li><a href="#">VIP CENTER</a></li>
-                    <li><a href="#">VIP MALL</a></li>
-                    <li><a href="#">MEMBERSHIP</a></li>
-                </ul>
-            </li>
-            <li><a href="#">ABOUT</a>
-                <ul class="lnb">
-                    <li><a href="#">MISSION</a></li>
-                    <li><a href="#">OUR VIDEO</a></li>
-                </ul>
-            </li>
-            <li><a href="#">COMMUNITY</a>
-                <ul class="lnb">
-                    <li><a href="#">NOTICE</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">PARTNERSHIP</a></li>
-                    <li><a href="#">COLLABORATION</a></li>
-                    <li><a href="#">STORE</a></li>
-                </ul>
-            </li>
-            <li><a href="#">EVENT</a></li>
-            <li><a href="#">GLOBAL</a></li>
-        </ul>
-    </nav>
     <main>
         <div class="control">
             <button type="button" class="scroll-up">
@@ -93,7 +95,7 @@
             </div>    
         </section>
         <section class="best_items_g">
-            <h2 class="best_items">BEST ITEMS</h2>
+            <h2 class="best_items sub_title">BEST ITEMS</h2>
             <div class="swiper best_item_slide">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide Product_group">
@@ -107,13 +109,17 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -132,13 +138,17 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -157,13 +167,17 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -182,13 +196,17 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -207,13 +225,17 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -232,13 +254,17 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -257,13 +283,17 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -282,13 +312,104 @@
                         <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
                         <p class="product_original_price"><del>21,000원</del></p>
                         <div class="product_sale">
-                            <p class="sale_info">일반 할인가</p>
-                            <p class="sale_price">11,900원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
                             <p class="percentage">43%</p>
                         </div>
                         <div class="product_sale">
-                            <p class="sale_info">VIP 혜택가</p>
-                            <p class="sale_price">10,800원</p>
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
+                            <p class="percentage">49%</p>
+                        </div>
+                        <div class="product_reviw">
+                            <img src="./images/index/star.png" alt="리뷰아이콘">
+                            <p class="reviw_count">4.8(10,878)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide Product_group">
+                        <a href="#" class="product_img">
+                            <img src="./images/index/img.jpg" alt="베스트제품1">
+                        </a>
+                        <div class="product_title">
+                            <a href="#">스마일패드 (소형/대형)</a>
+                            <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                        </div>
+                        <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
+                        <p class="product_original_price"><del>21,000원</del></p>
+                        <div class="product_sale">
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
+                            <p class="percentage">43%</p>
+                        </div>
+                        <div class="product_sale">
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
+                            <p class="percentage">49%</p>
+                        </div>
+                        <div class="product_reviw">
+                            <img src="./images/index/star.png" alt="리뷰아이콘">
+                            <p class="reviw_count">4.8(10,878)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide Product_group">
+                        <a href="#" class="product_img">
+                            <img src="./images/index/img.jpg" alt="베스트제품1">
+                        </a>
+                        <div class="product_title">
+                            <a href="#">스마일패드 (소형/대형)</a>
+                            <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                        </div>
+                        <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
+                        <p class="product_original_price"><del>21,000원</del></p>
+                        <div class="product_sale">
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
+                            <p class="percentage">43%</p>
+                        </div>
+                        <div class="product_sale">
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
+                            <p class="percentage">49%</p>
+                        </div>
+                        <div class="product_reviw">
+                            <img src="./images/index/star.png" alt="리뷰아이콘">
+                            <p class="reviw_count">4.8(10,878)</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide Product_group">
+                        <a href="#" class="product_img">
+                            <img src="./images/index/img.jpg" alt="베스트제품1">
+                        </a>
+                        <div class="product_title">
+                            <a href="#">스마일패드 (소형/대형)</a>
+                            <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                        </div>
+                        <p class="product_info">고분자 흡수체와 천연 펄프 조합의 프리미엄 배변패드, 소형(50매) 대형(20매)</p>
+                        <p class="product_original_price"><del>21,000원</del></p>
+                        <div class="product_sale">
+                            <div class="product_sale_left">
+                                <p class="sale_info">일반 할인가</p>
+                                <p class="sale_price">11,900원</p>    
+                            </div>
+                            <p class="percentage">43%</p>
+                        </div>
+                        <div class="product_sale">
+                            <div class="product_sale_left">
+                                <p class="sale_info">VIP 혜택가</p>
+                                <p class="sale_price">10,800원</p>    
+                            </div>
                             <p class="percentage">49%</p>
                         </div>
                         <div class="product_reviw">
@@ -303,201 +424,231 @@
             </div>
         </section>
         <section class="with_pethroom_g">
-            <h2>WITH PETHROOM</h2>
-            <div class="delivery">
-                <a href="#"><img src="./images/index/delivery.jpg" alt="정기배송"></a>
-                <a href="#"><p>정기배송</p></a>
-                <p>정기배송 결제 시 VIP멤버십 자동 가입!<br>계속 쓰는 소모품 정기배송으로 편리함과 비용의 부담도 절감하세요.</p>
-            </div>
-            <div class="vip_membership">
-                <a href="#"><img src="./images/index/35off.jpg" alt="정기배송"></a>
-                <a href="#"><p>VIP MEMBERSHIP</p></a>
-                <p>가입 시 전제품 35% 추가할인!<br>반려동물을 위한 특별한 혜택을 누려보세요.</p>
-            </div>
-            <div class="smart_life_care">
-                <a href="#"><img src="./images/index/smart.jpg" alt="정기배송"></a>
-                <a href="#"><p>Smart life care PETHROOM</p></a>
-                <p>반려동물의 건강과 행복을 스마트하게 관리하는 페스룸 케어!<br>
-                    SMART ROBOT과 함께 제공하는 IOT 기능으로 반려동물의 생활 습관을<br> 
-                    분석하고 최적의 제품과 서비스를 제공합니다.</p> 
+            <h2 class="sub_title">WITH PETHROOM</h2>
+            <div class="with_info">
+                <div class="with delivery">
+                    <a href="#" class="with_img"><img src="./images/index/delivery.jpg" alt="정기배송"></a>
+                    <a href="#"><p class="event_title">정기배송</p></a>
+                    <p class="event_info">정기배송 결제 시 VIP멤버십 자동 가입!<br>계속 쓰는 소모품 정기배송으로 편리함과 비용의 부담도 절감하세요.</p>
+                </div>
+                <div class="with vip_membership">
+                    <a href="#" class="with_img"><img src="./images/index/35off.jpg" alt="vip멤버십"></a>
+                    <a href="#"><p class="event_title">VIP MEMBERSHIP</p></a>
+                    <p class="event_info">가입 시 전제품 35% 추가할인!<br>반려동물을 위한 특별한 혜택을 누려보세요.</p>
+                </div>
+                <div class="with smart_life_care">
+                    <a href="#" class="with_img"><img src="./images/index/smart.jpg" alt="스마트케어"></a>
+                    <a href="#"><p class="event_title">Smart life care PETHROOM</p></a>
+                    <p class="event_info">반려동물의 건강과 행복을 스마트하게 관리하는 페스룸 케어!<br>
+                        SMART ROBOT과 함께 제공하는 IOT 기능으로 반려동물의 생활 습관을<br> 
+                        분석하고 최적의 제품과 서비스를 제공합니다.</p> 
+                </div>    
             </div>
         </section>
-        <a href="#" class="mebership_bnr"><img src="./images/index/vip_bnr.jpg" alt="vip 멥버십 가입하러가기"></a>
-        <section id="for_dog">
+        <section id="mebership_bnr">
+            <a href="#" class="mebership_bnr"><img src="./images/index/vip_bnr.jpg" alt="vip 멥버십 가입하러가기"></a>
+        </section>
+        <section class="for_dog for">
             <a href="#"><img src="./images/index/for_dog.jpg" alt="강아지 제품 보러가기"></a>
-            <div class=for_dog_title>
-                <h2>FOR DOG</h2>
-                <a href="#">전체보기</a>
-            </div>
-            <div class="right_product">
-                <div class="swiper">
-                    <div class="swiper-wrapper first_line">
-                        <div class="swiper-slide for_Product_group">
-                            <a href="#" class="product_img">
-                                <img src="./images/index/img.jpg" alt="베스트제품1">
-                            </a>
-                            <div class="product_title">
-                                <a href="#">스마일패드 (소형/대형)</a>
-                                <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">일반 할인가</p>
-                                <p class="sale_price">11,900원</p>
-                                <p class="percentage">43%</p>
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">VIP 혜택가</p>
-                                <p class="sale_price">10,800원</p>
-                                <p class="percentage">49%</p>
-                            </div>
-                            <div class="product_reviw">
-                                <img src="./images/index/star.png" alt="리뷰아이콘">
-                                <p class="reviw_count">4.8(10,878)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide for_Product_group">
-                            <a href="#" class="product_img">
-                                <img src="./images/index/img.jpg" alt="베스트제품1">
-                            </a>
-                            <div class="product_title">
-                                <a href="#">스마일패드 (소형/대형)</a>
-                                <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">일반 할인가</p>
-                                <p class="sale_price">11,900원</p>
-                                <p class="percentage">43%</p>
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">VIP 혜택가</p>
-                                <p class="sale_price">10,800원</p>
-                                <p class="percentage">49%</p>
-                            </div>
-                            <div class="product_reviw">
-                                <img src="./images/index/star.png" alt="리뷰아이콘">
-                                <p class="reviw_count">4.8(10,878)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide for_Product_group">
-                            <a href="#" class="product_img">
-                                <img src="./images/index/img.jpg" alt="베스트제품1">
-                            </a>
-                            <div class="product_title">
-                                <a href="#">스마일패드 (소형/대형)</a>
-                                <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">일반 할인가</p>
-                                <p class="sale_price">11,900원</p>
-                                <p class="percentage">43%</p>
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">VIP 혜택가</p>
-                                <p class="sale_price">10,800원</p>
-                                <p class="percentage">49%</p>
-                            </div>
-                            <div class="product_reviw">
-                                <img src="./images/index/star.png" alt="리뷰아이콘">
-                                <p class="reviw_count">4.8(10,878)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-wrapper second_line">
-                            <div class="swiper-slide for_Product_group">
-                                <a href="#" class="product_img">
-                                    <img src="./images/index/img.jpg" alt="베스트제품1">
-                                </a>
-                                <div class="product_title">
-                                    <a href="#">스마일패드 (소형/대형)</a>
-                                    <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                                </div>
-                                <div class="product_sale">
-                                    <p class="sale_info">일반 할인가</p>
-                                    <p class="sale_price">11,900원</p>
-                                    <p class="percentage">43%</p>
-                                </div>
-                                <div class="product_sale">
-                                    <p class="sale_info">VIP 혜택가</p>
-                                    <p class="sale_price">10,800원</p>
-                                    <p class="percentage">49%</p>
-                                </div>
-                                <div class="product_reviw">
-                                    <img src="./images/index/star.png" alt="리뷰아이콘">
-                                    <p class="reviw_count">4.8(10,878)</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide for_Product_group">
-                                <a href="#" class="product_img">
-                                    <img src="./images/index/img.jpg" alt="베스트제품1">
-                                </a>
-                                <div class="product_title">
-                                    <a href="#">스마일패드 (소형/대형)</a>
-                                    <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                                </div>
-                                <div class="product_sale">
-                                    <p class="sale_info">일반 할인가</p>
-                                    <p class="sale_price">11,900원</p>
-                                    <p class="percentage">43%</p>
-                                </div>
-                                <div class="product_sale">
-                                    <p class="sale_info">VIP 혜택가</p>
-                                    <p class="sale_price">10,800원</p>
-                                    <p class="percentage">49%</p>
-                                </div>
-                                <div class="product_reviw">
-                                    <img src="./images/index/star.png" alt="리뷰아이콘">
-                                    <p class="reviw_count">4.8(10,878)</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide for_Product_group">
-                                <a href="#" class="product_img">
-                                    <img src="./images/index/img.jpg" alt="베스트제품1">
-                                </a>
-                                <div class="product_title">
-                                    <a href="#">스마일패드 (소형/대형)</a>
-                                    <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                                </div>
-                                <div class="product_sale">
-                                    <p class="sale_info">일반 할인가</p>
-                                    <p class="sale_price">11,900원</p>
-                                    <p class="percentage">43%</p>
-                                </div>
-                                <div class="product_sale">
-                                    <p class="sale_info">VIP 혜택가</p>
-                                    <p class="sale_price">10,800원</p>
-                                    <p class="percentage">49%</p>
-                                </div>
-                                <div class="product_reviw">
-                                    <img src="./images/index/star.png" alt="리뷰아이콘">
-                                    <p class="reviw_count">4.8(10,878)</p>
-                                </div>
-                            </div>
-                    </div>
-                    <div class="swiper-scrollbar"></div>
+            <div class="for_g">
+                <div class="for_title_g">
+                    <h2 class="for_title">FOR DOG</h2>
+                    <a href="#">전체보기</a>
                 </div>
+                <div class="right_product_g">
+                    <div class="swiper right_product">
+                        <div class="swiper-wrapper frist_line">
+                                <div class="swiper-slide for_Product_group">
+                                    <a href="#" class="product_img">
+                                        <img src="./images/index/img.jpg" alt="베스트제품1">
+                                    </a>
+                                    <div class="product_title">
+                                        <a href="#">스마일패드 (소형/대형)</a>
+                                        <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">일반 할인가</p>
+                                            <p class="sale_price">11,900원</p>    
+                                        </div>
+                                        <p class="percentage">43%</p>
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">VIP 혜택가</p>
+                                            <p class="sale_price">10,800원</p>    
+                                        </div>
+                                        <p class="percentage">49%</p>
+                                    </div>
+                                    <div class="product_reviw">
+                                        <img src="./images/index/star.png" alt="리뷰아이콘">
+                                        <p class="reviw_count">4.8(10,878)</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide for_Product_group">
+                                    <a href="#" class="product_img">
+                                        <img src="./images/index/img.jpg" alt="베스트제품1">
+                                    </a>
+                                    <div class="product_title">
+                                        <a href="#">스마일패드 (소형/대형)</a>
+                                        <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">일반 할인가</p>
+                                            <p class="sale_price">11,900원</p>    
+                                        </div>
+                                        <p class="percentage">43%</p>
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">VIP 혜택가</p>
+                                            <p class="sale_price">10,800원</p>    
+                                        </div>
+                                        <p class="percentage">49%</p>
+                                    </div>
+                                    <div class="product_reviw">
+                                        <img src="./images/index/star.png" alt="리뷰아이콘">
+                                        <p class="reviw_count">4.8(10,878)</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide for_Product_group">
+                                    <a href="#" class="product_img">
+                                        <img src="./images/index/img.jpg" alt="베스트제품1">
+                                    </a>
+                                    <div class="product_title">
+                                        <a href="#">스마일패드 (소형/대형)</a>
+                                        <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">일반 할인가</p>
+                                            <p class="sale_price">11,900원</p>    
+                                        </div>
+                                        <p class="percentage">43%</p>
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">VIP 혜택가</p>
+                                            <p class="sale_price">10,800원</p>    
+                                        </div>
+                                        <p class="percentage">49%</p>
+                                    </div>
+                                    <div class="product_reviw">
+                                        <img src="./images/index/star.png" alt="리뷰아이콘">
+                                        <p class="reviw_count">4.8(10,878)</p>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="swiper-wrapper second_line">
+                                <div class="swiper-slide for_Product_group">
+                                    <a href="#" class="product_img">
+                                        <img src="./images/index/img.jpg" alt="베스트제품1">
+                                    </a>
+                                    <div class="product_title">
+                                        <a href="#">스마일패드 (소형/대형)</a>
+                                        <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">일반 할인가</p>
+                                            <p class="sale_price">11,900원</p>    
+                                        </div>
+                                        <p class="percentage">43%</p>
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">VIP 혜택가</p>
+                                            <p class="sale_price">10,800원</p>    
+                                        </div>
+                                        <p class="percentage">49%</p>
+                                    </div>
+                                    <div class="product_reviw">
+                                        <img src="./images/index/star.png" alt="리뷰아이콘">
+                                        <p class="reviw_count">4.8(10,878)</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide for_Product_group">
+                                    <a href="#" class="product_img">
+                                        <img src="./images/index/img.jpg" alt="베스트제품1">
+                                    </a>
+                                    <div class="product_title">
+                                        <a href="#">스마일패드 (소형/대형)</a>
+                                        <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">일반 할인가</p>
+                                            <p class="sale_price">11,900원</p>    
+                                        </div>
+                                        <p class="percentage">43%</p>
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">VIP 혜택가</p>
+                                            <p class="sale_price">10,800원</p>    
+                                        </div>
+                                        <p class="percentage">49%</p>
+                                    </div>
+                                    <div class="product_reviw">
+                                        <img src="./images/index/star.png" alt="리뷰아이콘">
+                                        <p class="reviw_count">4.8(10,878)</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide for_Product_group">
+                                    <a href="#" class="product_img">
+                                        <img src="./images/index/img.jpg" alt="베스트제품1">
+                                    </a>
+                                    <div class="product_title">
+                                        <a href="#">스마일패드 (소형/대형)</a>
+                                        <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">일반 할인가</p>
+                                            <p class="sale_price">11,900원</p>    
+                                        </div>
+                                        <p class="percentage">43%</p>
+                                    </div>
+                                    <div class="product_sale">
+                                        <div class="product_price">
+                                            <p class="sale_info">VIP 혜택가</p>
+                                            <p class="sale_price">10,800원</p>    
+                                        </div>
+                                        <p class="percentage">49%</p>
+                                    </div>
+                                    <div class="product_reviw">
+                                        <img src="./images/index/star.png" alt="리뷰아이콘">
+                                        <p class="reviw_count">4.8(10,878)</p>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>    
+            </div>
         </section>
         <section id="smart_care">
             <div class="smart_care_info">
-                <h3>Smart life care PETHROOM</h3>
+                <h3 class="smart_title">Smart life care PETHROOM</h3>
                 <p>페스룸 로봇랩은 반려동물에 대한<br>
                     이해와 독자적인 기술을 바탕으로<br>
                     반려생활의 맞춤 솔루션을 제공합니다.<br>
                     IoT 기술로 새로운 차원의 반려생활을 만나보세요.</p>
             </div>
             <div class="smart_care_link">
-                <a href="#"><!-- 백그라운드 이미지 -->
+                <a href="#" class="loopoo"><!-- 백그라운드 이미지 -->
                     <h3>LOOPOO AUTOMATIC<br>
                         LITTER BOX</h3>
                     <p>오픈형+초대형 자동화장실<br>
                         앱 연동으로 똑똑한 반려동물 헬스케어</p>
                 </a>
-                <a href="#"><!-- 백그라운드 이미지 -->
+                <a href="#" class="water"><!-- 백그라운드 이미지 -->
                     <h3>SMART PET WATER<br>
                         DISPENSER</h3>
                     <p>음수한 데이터를 정교하게 기록,<br>
                         관리할 수 있는 자동 음수기</p>
                 </a>
-                <a href="#"><!-- 백그라운드 이미지 -->
+                <a href="#" class="automatic"><!-- 백그라운드 이미지 -->
                     <h3>SMART AUTOMATIC<br>
                         PET FEEDER</h3>
                     <p>루틴에 맞춰 원하는 시간에 원하는 만큼<br>
@@ -505,84 +656,97 @@
                 </a>
             </div>
         </section>
-        <section id="for_cat">
+        <section class="for_cat for">
             <a href="#"><img src="./images/index/for_cat.jpg" alt="고양이 제품 보러가기"></a>
-            <div class=for_dog_title>
-                <h2>FOR CAT</h2>
-                <a href="#">전체보기</a>
-            </div>
-            <div class="right_product">
-                <div class="swiper">
-                    <div class="swiper-wrapper first_line">
-                        <div class="swiper-slide for_Product_group">
-                            <a href="#" class="product_img">
-                                <img src="./images/index/img.jpg" alt="베스트제품1">
-                            </a>
-                            <div class="product_title">
-                                <a href="#">스마일패드 (소형/대형)</a>
-                                <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+            <div class="for_g">
+                <div class=for_title_g>
+                    <h2 class="for_title">FOR CAT</h2>
+                    <a href="#">전체보기</a>
+                </div>
+                <div class="right_product_g">
+                    <div class="swiper right_product">
+                        <div class="swiper-wrapper frist_line">
+                            <div class="swiper-slide for_Product_group">
+                                <a href="#" class="product_img">
+                                    <img src="./images/index/img.jpg" alt="베스트제품1">
+                                </a>
+                                <div class="product_title">
+                                    <a href="#">스마일패드 (소형/대형)</a>
+                                    <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                </div>
+                                <div class="product_sale">
+                                    <div class="product_price">
+                                        <p class="sale_info">일반 할인가</p>
+                                        <p class="sale_price">11,900원</p>    
+                                    </div>
+                                    <p class="percentage">43%</p>
+                                </div>
+                                <div class="product_sale">
+                                    <div class="product_price">
+                                        <p class="sale_info">VIP 혜택가</p>
+                                        <p class="sale_price">10,800원</p>    
+                                    </div>
+                                    <p class="percentage">49%</p>
+                                </div>
+                                <div class="product_reviw">
+                                    <img src="./images/index/star.png" alt="리뷰아이콘">
+                                    <p class="reviw_count">4.8(10,878)</p>
+                                </div>
                             </div>
-                            <div class="product_sale">
-                                <p class="sale_info">일반 할인가</p>
-                                <p class="sale_price">11,900원</p>
-                                <p class="percentage">43%</p>
+                            <div class="swiper-slide for_Product_group">
+                                <a href="#" class="product_img">
+                                    <img src="./images/index/img.jpg" alt="베스트제품1">
+                                </a>
+                                <div class="product_title">
+                                    <a href="#">스마일패드 (소형/대형)</a>
+                                    <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                </div>
+                                <div class="product_sale">
+                                    <div class="product_price">
+                                        <p class="sale_info">일반 할인가</p>
+                                        <p class="sale_price">11,900원</p>    
+                                    </div>
+                                    <p class="percentage">43%</p>
+                                </div>
+                                <div class="product_sale">
+                                    <div class="product_price">
+                                        <p class="sale_info">VIP 혜택가</p>
+                                        <p class="sale_price">10,800원</p>    
+                                    </div>
+                                    <p class="percentage">49%</p>
+                                </div>
+                                <div class="product_reviw">
+                                    <img src="./images/index/star.png" alt="리뷰아이콘">
+                                    <p class="reviw_count">4.8(10,878)</p>
+                                </div>
                             </div>
-                            <div class="product_sale">
-                                <p class="sale_info">VIP 혜택가</p>
-                                <p class="sale_price">10,800원</p>
-                                <p class="percentage">49%</p>
+                            <div class="swiper-slide for_Product_group">
+                                <a href="#" class="product_img">
+                                    <img src="./images/index/img.jpg" alt="베스트제품1">
+                                </a>
+                                <div class="product_title">
+                                    <a href="#">스마일패드 (소형/대형)</a>
+                                    <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
+                                </div>
+                                <div class="product_sale">
+                                    <div class="product_price">
+                                        <p class="sale_info">일반 할인가</p>
+                                        <p class="sale_price">11,900원</p>    
+                                    </div>
+                                    <p class="percentage">43%</p>
+                                </div>
+                                <div class="product_sale">
+                                    <div class="product_price">
+                                        <p class="sale_info">VIP 혜택가</p>
+                                        <p class="sale_price">10,800원</p>    
+                                    </div>
+                                    <p class="percentage">49%</p>
+                                </div>
+                                <div class="product_reviw">
+                                    <img src="./images/index/star.png" alt="리뷰아이콘">
+                                    <p class="reviw_count">4.8(10,878)</p>
+                                </div>
                             </div>
-                            <div class="product_reviw">
-                                <img src="./images/index/star.png" alt="리뷰아이콘">
-                                <p class="reviw_count">4.8(10,878)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide for_Product_group">
-                            <a href="#" class="product_img">
-                                <img src="./images/index/img.jpg" alt="베스트제품1">
-                            </a>
-                            <div class="product_title">
-                                <a href="#">스마일패드 (소형/대형)</a>
-                                <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">일반 할인가</p>
-                                <p class="sale_price">11,900원</p>
-                                <p class="percentage">43%</p>
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">VIP 혜택가</p>
-                                <p class="sale_price">10,800원</p>
-                                <p class="percentage">49%</p>
-                            </div>
-                            <div class="product_reviw">
-                                <img src="./images/index/star.png" alt="리뷰아이콘">
-                                <p class="reviw_count">4.8(10,878)</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide for_Product_group">
-                            <a href="#" class="product_img">
-                                <img src="./images/index/img.jpg" alt="베스트제품1">
-                            </a>
-                            <div class="product_title">
-                                <a href="#">스마일패드 (소형/대형)</a>
-                                <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">일반 할인가</p>
-                                <p class="sale_price">11,900원</p>
-                                <p class="percentage">43%</p>
-                            </div>
-                            <div class="product_sale">
-                                <p class="sale_info">VIP 혜택가</p>
-                                <p class="sale_price">10,800원</p>
-                                <p class="percentage">49%</p>
-                            </div>
-                            <div class="product_reviw">
-                                <img src="./images/index/star.png" alt="리뷰아이콘">
-                                <p class="reviw_count">4.8(10,878)</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="swiper-wrapper second_line">
                             <div class="swiper-slide for_Product_group">
@@ -594,13 +758,17 @@
                                     <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
                                 </div>
                                 <div class="product_sale">
-                                    <p class="sale_info">일반 할인가</p>
-                                    <p class="sale_price">11,900원</p>
+                                    <div class="product_price">
+                                        <p class="sale_info">일반 할인가</p>
+                                        <p class="sale_price">11,900원</p>    
+                                    </div>
                                     <p class="percentage">43%</p>
                                 </div>
                                 <div class="product_sale">
-                                    <p class="sale_info">VIP 혜택가</p>
-                                    <p class="sale_price">10,800원</p>
+                                    <div class="product_price">
+                                        <p class="sale_info">VIP 혜택가</p>
+                                        <p class="sale_price">10,800원</p>    
+                                    </div>
                                     <p class="percentage">49%</p>
                                 </div>
                                 <div class="product_reviw">
@@ -617,13 +785,17 @@
                                     <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
                                 </div>
                                 <div class="product_sale">
-                                    <p class="sale_info">일반 할인가</p>
-                                    <p class="sale_price">11,900원</p>
+                                    <div class="product_price">
+                                        <p class="sale_info">일반 할인가</p>
+                                        <p class="sale_price">11,900원</p>    
+                                    </div>
                                     <p class="percentage">43%</p>
                                 </div>
                                 <div class="product_sale">
-                                    <p class="sale_info">VIP 혜택가</p>
-                                    <p class="sale_price">10,800원</p>
+                                    <div class="product_price">
+                                        <p class="sale_info">VIP 혜택가</p>
+                                        <p class="sale_price">10,800원</p>    
+                                    </div>
                                     <p class="percentage">49%</p>
                                 </div>
                                 <div class="product_reviw">
@@ -640,13 +812,17 @@
                                     <button type="button" class="bag"><img src="./images/index/bag.png" alt=""></button>    
                                 </div>
                                 <div class="product_sale">
-                                    <p class="sale_info">일반 할인가</p>
-                                    <p class="sale_price">11,900원</p>
+                                    <div class="product_price">
+                                        <p class="sale_info">일반 할인가</p>
+                                        <p class="sale_price">11,900원</p>    
+                                    </div>
                                     <p class="percentage">43%</p>
                                 </div>
                                 <div class="product_sale">
-                                    <p class="sale_info">VIP 혜택가</p>
-                                    <p class="sale_price">10,800원</p>
+                                    <div class="product_price">
+                                        <p class="sale_info">VIP 혜택가</p>
+                                        <p class="sale_price">10,800원</p>    
+                                    </div>
                                     <p class="percentage">49%</p>
                                 </div>
                                 <div class="product_reviw">
@@ -656,11 +832,12 @@
                             </div>
                     </div>
                     <div class="swiper-scrollbar"></div>
-                </div>
+                    </div>    
+            </div>
         </section>
         <section id="pethroom_about">
             <div class="about_bg">
-                <h2 class="about_title">ABOUT</h2>
+                <h2 class="sub_title">ABOUT</h2>
                 <img src="./images/index/about_bg.jpg" alt="about배경">
             </div>
             <div class="about_info">

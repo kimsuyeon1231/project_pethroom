@@ -1,1 +1,122 @@
 @use './common.scss' as*;
+
+main {
+    section {margin-bottom: 150px;}
+    [class$="sub_title"] { text-align: center; font-size: $font-size26; font-weight: $font-width-semibold; padding: 50px 0; margin-bottom: 32px;}
+    .bnr_section {
+        .bnr_g { width: 100%; height: 700px; overflow: hidden;
+            .swiper-wrapper {
+                .swiper-slide {
+                    img {width: 100%;}
+                }
+                .swiper-pagination {}
+            }
+        }
+    }
+    .best_items_g { padding: 0 30px;  position: relative; z-index: 998;
+        .best_items sub_title {}
+        .best_item_slide {background-color: aqua;
+            width: 1620px; height: 547px; margin: 0 auto;
+            >.swiper-wrapper {@include flex-row; gap:30px;
+                .swiper-slide {width: 300px; height: 517px; 
+                    .product_img {width: 300px; height: 300px; display: inline-block; margin-bottom: 18px;
+                        img {@include width100;}
+                    }
+                    .product_title { @include flex-row; justify-content: space-between; margin-bottom: 15px;
+                        >a {font-weight: $font-width-mediun;}
+                        .bag {width: 24px; height: 24px; 
+                            img {@include width100;}
+                        }
+                    }
+                    .product_info {margin-bottom: 12px;
+                        font-size: $font-size14; color: $color-gray-62;
+                    }
+                    .product_original_price {
+                        font-size: $font-size12; color: $color-gray-62;
+                    }
+                    .product_sale { @include flex-row; justify-content: space-between; margin-top: 5px;
+                        .product_sale_left { @include flex-row;
+                            .sale_info {font-size: $font-size10;}
+                            .sale_price {font-weight: $font-width-mediun}    
+                        }
+                        .percentage {font-size: $font-size12;}
+                    }
+                    .product_reviw { @include flex-row; gap: 5px;  margin-top: 12px;
+                        img {width: 13px;}
+                        .reviw_count {font-size: $font-size12;
+                        }
+                    }
+                }
+                .swiper-button-prev {}
+                .swiper-button-next {}
+                .swiper-scrollbar {}
+            }
+        }
+    }
+    .with_pethroom_g {
+        .with_info { @include flex-row; gap: 1px; background-color: chocolate; justify-content: center; align-items: start;
+            .with {background-color: blue; text-align: center;
+                .with_img {width: 500px; height: 500px; margin-bottom: 30px; display: inline-block;
+                    img {@include width100;}
+                }
+                .event_title {font-size: $font-size20; margin-bottom: 18px;}
+                .event_info {font-size: $font-size14; line-height: 150%; height: 63px;}
+            }   
+        }
+        }
+    #mebership_bnr {
+        .mebership_bnr {@include width100;
+            img {@include width100;}
+        }
+    }
+    .for {@include flex-row; gap: 110px; justify-content: center;
+        >a{
+            img {}
+        }
+        .for_g { @include flex-col;  background-color: aqua;
+            .for_title_g {@include flex-row; justify-content: space-between; width: 100%;
+                .for_title {font-size: $font-size26; font-weight: $font-width-semibold;}
+                a {color: $color-gray-62; font-size: $font-size14;}
+            }
+            .right_product_g {
+                .right_product {
+                    .swiper-wrapper {border: 3px solid blue; width: 810px;  @include flex-row; gap: 30px;
+                        .for_Product_group { background-color: coral; width: 250px; height: 376px; margin: 15px 0;
+                            .product_img { width: 250px; height: 250px; display: inline-block; margin-bottom: 18px;
+                                img {@include width100;}
+                            }
+                            .product_title {@include flex-row; justify-content: space-between; margin-bottom: 15px;
+                                a {font-weight: $font-width-mediun;}
+                                .bag {width: 24px; height: 24px;
+                                    img{@include width100;}
+                                }
+                            }
+                            .product_sale {@include flex-row; justify-content: space-between;
+                                .product_price {@include flex-row; gap: 5px; margin-bottom: 5px;
+                                    .sale_info {font-size: $font-size10;}
+                                    .sale_price {font-weight: $font-width-mediun;}
+                                }
+                                .percentage {font-size: $font-size12; margin-bottom: 5px;}
+                            }
+                            .product_reviw {@include flex-row; gap: 5px; margin-top: 8px;
+                                img {width: 13px;}
+                                .reviw_count {font-size: $font-size12;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #smart_care { @include flex-row; gap: 10px; justify-content: center;
+        .smart_care_info {@include flex-col; gap: 20px; align-items: start; width: 417px; line-height: 430px;
+            .smart_title {}
+            p {font-weight: $font-width-mediun; color: $color-gray-62;}
+        }
+        .smart_care_link {
+            .loopoo {}
+            .water {}
+            .automatic {}
+        }
+    }
+    }

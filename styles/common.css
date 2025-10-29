@@ -1,9 +1,9 @@
 @charset "UTF-8";
 body {
-  max-width: 1920px;
+  max-width: 1920px; background-color:
 }
 body header {
-  background-color: #1a2867;
+  background-color:#1a2867;
   height: 49px;
   display: flex;
   flex-flow: row nowrap;
@@ -53,29 +53,29 @@ body header .h_right .header_icon {
 body header .h_right .header_icon img {
   width: 100%;
 }
-body nav {
+body header nav {
   position: fixed;
   z-index: 999;
   background: #fff;
   width: 100%;
   top: 49px;
 }
-body nav .gnb {
+body header nav .gnb {
   display: flex;
   gap: 80px;
   padding: 5px 96px;
   border-bottom: 1px solid #dadada;
 }
-body nav .gnb > li {
+body header nav .gnb > li {
   position: relative;
 }
-body nav .gnb > li > a {
+body header nav .gnb > li > a {
   font-weight: 600;
   display: block;
   padding: 10px 20px;
   line-height: 1;
 }
-body nav .gnb > li > .lnb {
+body header nav .gnb > li > .lnb {
   position: absolute;
   top: 100%;
   z-index: 998;
@@ -85,21 +85,21 @@ body nav .gnb > li > .lnb {
   opacity: 0;
   transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.1s;
 }
-body nav .gnb > li > .lnb > li > a {
+body header nav .gnb > li > .lnb > li > a {
   display: block;
   padding: 0 10px 0;
   margin: 20px 20px;
   font-size: 0.875rem;
   white-space: nowrap;
 }
-body nav .gnb > li:hover > .lnb, body nav .gnb > li:focus-within > .lnb {
+body header nav .gnb > li:hover > .lnb, body header nav .gnb > li:focus-within > .lnb {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
   transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s;
   pointer-events: auto;
 }
-body main .control {
+body header main .control {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -109,17 +109,17 @@ body main .control {
   right: 10px;
   gap: 15px;
 }
-body main .control button {
+body header main .control button {
   width: 35px;
 }
-body main .control button img {
+body header main .control button img {
   width: 100%;
 }
-body main .control > a {
+body header main .control > a {
   width: 35px;
   display: inline-block;
 }
-body main .control > a img {
+body header main .control > a img {
   width: 100%;
 }
 
