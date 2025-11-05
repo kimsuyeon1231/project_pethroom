@@ -108,15 +108,48 @@ main {
             }
         }
     }
-    #smart_care { @include flex-row; gap: 10px; justify-content: center;
-        .smart_care_info {@include flex-col; gap: 20px; align-items: start; width: 417px; line-height: 430px;
-            .smart_title {}
-            p {font-weight: $font-width-mediun; color: $color-gray-62;}
+    #smart_care { @include flex-row; gap: 10px; justify-content: center; background-image: url(../images/index/6bg.jpg); @include background; padding: 50px 0;
+        .smart_care_info {@include flex-col; gap: 20px; align-items: start; width: 417px; line-height: 430px; margin: 0 auto; text-align: center;
+            .smart_title {
+                font-weight: $font-width-mediun; font-size: $font-size20;
+            }
+            p {font-weight: $font-width-mediun; color: $color-gray-62; line-height: 1.5;
+        }}
+        .smart_care_link {@include flex-row; gap: 10px;
+            .loopoo {width: 315px; height: 430px; @include background; background-image: url(../images/index/smartcare1.png);
+                color: $color-white; padding: 40px;
+                h3{font-weight: $font-width-bold; margin-bottom: 20px;}
+                p{font-size: $font-size14; line-height: 1.5;}
+            }
+            .water {
+                width: 315px; height: 430px; @include background; background-image: url(../images/index/smartcare2.png);
+                color: $color-white; padding: 40px;
+                h3{font-weight: $font-width-bold; margin-bottom: 20px;}
+                p{font-size: $font-size14; line-height: 1.5;}
+            }
+            .automatic {
+                width: 315px; height: 430px; @include background; background-image: url(../images/index/smartcare3.png);
+                color: $color-white; padding: 40px;
+                h3{font-weight: $font-width-bold; margin-bottom: 20px;}
+                p{font-size: $font-size14; line-height: 1.5;}
+            }
         }
-        .smart_care_link {
-            .loopoo {}
-            .water {}
-            .automatic {}
+    }
+    #pethroom_about {
+        .about_bg {
+            h2{}
+        }
+        .about_info { @include flex-row; justify-content: center;
+            .about_main_img {width: 601px; height: 400px;
+                img {width: 100%;}
+            }
+            .description {width: 601px; height: 400px;  padding: 66px 20px;
+                .info_main {font-size: $font-size20; font-weight: $font-width-mediun; line-height: 1.2; margin-bottom: 30px;}
+                .info {line-height: 1.5; margin-bottom: 30px;}
+                a {font-size: $font-size12; padding: 10px 20px; text-align: center; display: inline-block; line-height: 34px;
+                    img {width: 10px; display: inline-block; line-height: 34px; margin-left: 5px;}
+                }
+            }
         }
     }
     }
