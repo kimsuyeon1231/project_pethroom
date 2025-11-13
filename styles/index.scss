@@ -1,2 +1,62 @@
 @use './common.scss' as*;
 
+main {padding-top: 99px;
+    h2 {/* 섹션 타이틀  */
+        font-weight: $font-width-semibold; font-size: $font-size26; text-align: center;
+    }
+    .more {/* 전체보기 */
+        font-size: $font-size14; color: $color-gray-62; text-align: end; display: inline-block; width: 100%;
+    }
+    .product_g {/* 제품 공통 */
+    a {
+        display: inline-block;
+        img {width: 100%;}
+        }
+        .product_title {margin: 18px 0 15px;
+            @include flex-row; justify-content: space-between; align-items: center;
+            h3>a {font-weight: $font-width-mediun; }
+            span {width: 24px; height: 24px; img {width: 100%;} }
+        }
+        .product_info {line-height: 1.5; font-size: $font-size14; margin-bottom: 12px; color: $color-gray-62;}
+        del {color: $color-gray-62; font-size: $font-size12; margin-bottom: 5px; display: inline-block;} 
+        .product_price {
+            @include flex-row; align-items: start; margin-bottom: 5px;
+            .price {@include flex-row; }
+        }
+        .review {
+            margin: 12px 0 18px;
+        }
+    }
+
+    #bnr {
+        .bnr_g {
+            .bnr_container {
+                .bnr1, .bnr3 {
+                    a { @include background;
+                        background-image: url(../images/bnr1.jpg);
+                        width: 100%; height: 700px; display: inline-block;
+                    }
+                }
+                .bnr2, .bnr4 {
+                    a {
+                        background-image: url(../images/bnr2.jpg);
+                        width: 100%; height: 700px; display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+    #best_seller { padding: 0 96px;
+        .best_g {
+            .best_container {
+                .swiper-slide { width: 300px; margin: 0 15px 0;
+                }
+            }
+        }
+    }
+    #with_pethroom {
+        .with_container {
+            @include flex-row; gap: 1px; align-items: start;
+        }
+    }
+}

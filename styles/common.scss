@@ -19,6 +19,7 @@ $color-black :#121212;
 $color-white :#fff;
 $color-gray-87 :#878787;
 $color-gray-62:#626262;
+$color-gray-da:#dadada;
 $color-darkgray:#313131;
 
 
@@ -33,7 +34,8 @@ $color-darkgray:#313131;
 @mixin background {background-repeat: no-repeat; background-size: cover; background-position: center;}
 
 
-header{position: fixed; width: 100%;
+body { max-width: 1920px;
+    header{position: fixed; width: 100%; z-index: 999;
     .h_top {
         @include flex-row; justify-content: space-between; height: 49px;
         background-color: $color-point; padding: 0 96px;
@@ -51,7 +53,7 @@ header{position: fixed; width: 100%;
             .gnb_a {font-weight: $font-width-semibold; line-height: 50px; display:inline-block;}
             .lnb {@include flex-col; gap: 25px; align-items: start; padding: 20px;
                 background-color: none;
-                position: absolute;
+                position: absolute; display: none; /* 임시-수정하기 */
                 &::before {content: ''; inset: 0; width: 100%; background-color: $color-white;}
                 li {
                     a {font-size: $font-size14; white-space: nowrap;}
@@ -60,5 +62,34 @@ header{position: fixed; width: 100%;
         }
     }
 }
+footer { border-top: 1px solid $color-gray-da;
+    @include flex-row; justify-content: space-between; padding: 80px 96px 100px;
+    ul {
+        @include flex-col; align-items: start; gap: 10px; height: 230px; width: 200px;
+        li {font-size: $font-size14;
+            em {width: 200px; border-bottom: 1px solid $color-gray-87;
+                font-weight: $font-width-semibold; font-size: $font-size20;
+                padding: 10px 0; display: inline-block; }
+        }
+    }
+    .commpany_info{
+        width: 510px;
+        li {
+            em {width: 510px;}
+        }
+        }
+    .sns {
+        .icon {
+            .icon_container {@include flex-row; gap: 20px; align-items: start;
+                li {
+                    a {display: inline-block; width: 30px;
+                        img {width: 100%;}
+                    }
+                }
+            }
+        }
+    }
+}
 
+}
 
