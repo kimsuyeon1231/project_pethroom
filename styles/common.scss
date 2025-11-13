@@ -33,79 +33,32 @@ $color-darkgray:#313131;
 @mixin background {background-repeat: no-repeat; background-size: cover; background-position: center;}
 
 
+header{position: fixed; width: 100%;
+    .h_top {
+        @include flex-row; justify-content: space-between; height: 49px;
+        background-color: $color-point; padding: 0 96px;
+        h1 {}
+        .h_right {
+            .angel {width: 129px;}
+            a {display: inline-block; width: 20px;}
+            img {width: 100%;}
+            a:not(.cart) {margin-right: 25px;}
+        }
+    }
+    nav {  padding: 0 96px; background-color: $color-white;
+        .gnb {position: relative;
+            @include flex-row; align-items: start; gap: 80px;
+            .gnb_a {font-weight: $font-width-semibold; line-height: 50px; display:inline-block;}
+            .lnb {@include flex-col; gap: 25px; align-items: start; padding: 20px;
+                background-color: none;
+                position: absolute;
+                &::before {content: ''; inset: 0; width: 100%; background-color: $color-white;}
+                li {
+                    a {font-size: $font-size14; white-space: nowrap;}
+                }
+            }
+        }
+    }
+}
 
-body{ max-width: 1920px;
-    header { background-color:$color-point;
-            position: fixed; z-index: 999; width: 100%;
-        #logo {@include flex-row; justify-content: space-between; height: 49px; padding: 10px 96px;
-            h1 {
-                a { 
-                    color: $color-white;
-                    font-size: $font-size24; font-weight: $font-width-bold;
-                }
-            }
-            .h_right { @include flex-row; gap: 25px;
-                a:first-of-type { display: inline-block; background-color: $color-white;
-                    border-radius: 20px; padding: 3px 10px; @include flex-row;
-                    img {width: 15px; display: block;}
-                    span { color: $color-point; font-size: $font-size12; font-weight: $font-width-mediun;}
-                    }
-                .header_icon {width: 20px; height: 20px; display: inline-block;
-                    img {width: 100%;}
-                }
-            }    
-        }
-        nav { position: fixed; z-index: 999; background:$color-white; width: 100%; top: 49px;
-            .gnb { display: flex; gap: 80px; padding: 5px 96px; border-bottom: 1px solid #dadada;
-                > li {position: relative;
-                > a { font-weight: $font-width-semibold;
-                    display: block;
-                    padding: 10px 20px;   // 클릭 영역
-                    line-height: 1;       // 텍스트 정렬
-                    }
-                > .lnb {
-                    position: absolute; top: 100%; z-index: 998;
-                    min-width: 100%; background: #fff;
-                    /* 부드러운 표시/숨김 */
-                    opacity: 0;
-                    transition: opacity .15s ease, transform .15s ease, visibility 0s linear .10s; // 숨길 때만 지연
-                    > li {
-                    > a {
-                        display: block; padding:0 10px 0 ; margin:20px 20px; font-size: $font-size14;
-                        white-space: nowrap; //자동 줄바꿈 방지
-                        }
-                    }
-                        }
-                &:hover > .lnb,
-                &:focus-within > .lnb {
-                    opacity: 1; visibility: visible; transform: translateY(0);
-                    transition:
-                    opacity .15s ease, transform .15s ease, visibility 0s;
-                    pointer-events: auto;
-                }
-                }
-            }
-                }
-    }
-    main {
-        .control {@include flex-col; position: fixed; z-index: 999; top: 720px; right: 10px; gap: 15px;
-            button {width: 35px;
-                img {width: 100%;}
-            }
-            >a {width: 35px; display: inline-block;
-                img {width: 100%;}
-            }
-        }
-    }
-    footer { @include flex-row; gap: 206px; align-items: start; padding: 80px 96px 100px 96px;
-        h3 {font-weight: $font-width-semibold; font-size: $font-size20; padding: 10px 0; margin-bottom: 10px; border-bottom: 1px solid $color-gray-87; width: 200px;}
-        p {font-size: $font-size14; line-height: 1.5;}
-        .company_info>h3 {width: 500px;}
-        .sns {
-            a { width: 30px; display: inline-block; margin-right: 20px;
-                img {width: 100%;}
-            }
-        }
-    }  
-    }
 
