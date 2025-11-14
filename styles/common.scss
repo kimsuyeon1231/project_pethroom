@@ -34,7 +34,7 @@ $color-darkgray:#313131;
 @mixin background {background-repeat: no-repeat; background-size: cover; background-position: center;}
 
 
-body { max-width: 1920px;
+#wrap {
     header{position: fixed; width: 100%; z-index: 999;
     .h_top {
         @include flex-row; justify-content: space-between; height: 49px;
@@ -50,23 +50,28 @@ body { max-width: 1920px;
     nav {  padding: 0 96px; background-color: $color-white;
         .gnb {position: relative;
             @include flex-row; align-items: start; gap: 80px;
-            .gnb_a {font-weight: $font-width-semibold; line-height: 50px; display:inline-block;}
-            .lnb {@include flex-col; gap: 25px; align-items: start; padding: 20px;
-                background-color: none;
-                position: absolute; display: none; /* 임시-수정하기 */
-                &::before {content: ''; inset: 0; width: 100%; background-color: $color-white;}
+            .gnb_a {
+                &:hover {text-decoration: underline; text-underline-offset: 7px;/* 텍스트와 밑줄 공간 */}
+                font-weight: $font-width-semibold; display:inline-block; line-height: 50px;
+            }
+            .lnb {@include flex-col; gap: 25px; align-items: start; padding: 30px;
+                background-color: none; background-color: $color-white; display: none;
+                position: absolute;
                 li {
                     a {font-size: $font-size14; white-space: nowrap;}
                 }
             }
         }
+        .product_gnb:hover {>.lnb {display: flex; left: -43px;}}
+        .membership_gnb:hover {>.lnb {display: flex; left: 143.5px;}}
+        /* .about_gnb:hover {>.lnb {display: flex; left: 293px;}} */
     }
 }
 footer { border-top: 1px solid $color-gray-da;
     @include flex-row; justify-content: space-between; padding: 80px 96px 100px;
     ul {
         @include flex-col; align-items: start; gap: 10px; height: 230px; width: 200px;
-        li {font-size: $font-size14;
+        li {font-size: $font-size14; text-align: start;
             em {width: 200px; border-bottom: 1px solid $color-gray-87;
                 font-weight: $font-width-semibold; font-size: $font-size20;
                 padding: 10px 0; display: inline-block; }

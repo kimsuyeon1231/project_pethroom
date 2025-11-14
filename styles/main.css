@@ -1,13 +1,10 @@
 @charset "UTF-8";
-body {
-  max-width: 1920px;
-}
-body header {
+#wrap header {
   position: fixed;
   width: 100%;
   z-index: 999;
 }
-body header .h_top {
+#wrap header .h_top {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -16,24 +13,24 @@ body header .h_top {
   background-color: #1a2867;
   padding: 0 96px;
 }
-body header .h_top .h_right .angel {
+#wrap header .h_top .h_right .angel {
   width: 129px;
 }
-body header .h_top .h_right a {
+#wrap header .h_top .h_right a {
   display: inline-block;
   width: 20px;
 }
-body header .h_top .h_right img {
+#wrap header .h_top .h_right img {
   width: 100%;
 }
-body header .h_top .h_right a:not(.cart) {
+#wrap header .h_top .h_right a:not(.cart) {
   margin-right: 25px;
 }
-body header nav {
+#wrap header nav {
   padding: 0 96px;
   background-color: #fff;
 }
-body header nav .gnb {
+#wrap header nav .gnb {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
@@ -41,33 +38,43 @@ body header nav .gnb {
   align-items: start;
   gap: 80px;
 }
-body header nav .gnb .gnb_a {
-  font-weight: 600;
-  line-height: 50px;
-  display: inline-block;
+#wrap header nav .gnb .gnb_a:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px; /* 텍스트와 밑줄 공간 */
 }
-body header nav .gnb .lnb {
+#wrap header nav .gnb .gnb_a {
+  font-weight: 600;
+  display: inline-block;
+  line-height: 50px;
+}
+#wrap header nav .gnb .lnb {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   gap: 25px;
   align-items: start;
-  padding: 20px;
+  padding: 30px;
   background-color: none;
-  position: absolute;
-  display: none; /* 임시-수정하기 */
-}
-body header nav .gnb .lnb::before {
-  content: "";
-  inset: 0;
-  width: 100%;
   background-color: #fff;
+  display: none;
+  position: absolute;
 }
-body header nav .gnb .lnb li a {
+#wrap header nav .gnb .lnb li a {
   font-size: 0.875rem;
   white-space: nowrap;
 }
-body footer {
+#wrap header nav .product_gnb:hover > .lnb {
+  display: flex;
+  left: -43px;
+}
+#wrap header nav .membership_gnb:hover > .lnb {
+  display: flex;
+  left: 143.5px;
+}
+#wrap header nav {
+  /* .about_gnb:hover {>.lnb {display: flex; left: 293px;}} */
+}
+#wrap footer {
   border-top: 1px solid #dadada;
   display: flex;
   flex-flow: row nowrap;
@@ -75,7 +82,7 @@ body footer {
   justify-content: space-between;
   padding: 80px 96px 100px;
 }
-body footer ul {
+#wrap footer ul {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -84,10 +91,11 @@ body footer ul {
   height: 230px;
   width: 200px;
 }
-body footer ul li {
+#wrap footer ul li {
   font-size: 0.875rem;
+  text-align: start;
 }
-body footer ul li em {
+#wrap footer ul li em {
   width: 200px;
   border-bottom: 1px solid #878787;
   font-weight: 600;
@@ -95,43 +103,49 @@ body footer ul li em {
   padding: 10px 0;
   display: inline-block;
 }
-body footer .commpany_info {
+#wrap footer .commpany_info {
   width: 510px;
 }
-body footer .commpany_info li em {
+#wrap footer .commpany_info li em {
   width: 510px;
 }
-body footer .sns .icon .icon_container {
+#wrap footer .sns .icon .icon_container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   gap: 20px;
   align-items: start;
 }
-body footer .sns .icon .icon_container li a {
+#wrap footer .sns .icon .icon_container li a {
   display: inline-block;
   width: 30px;
 }
-body footer .sns .icon .icon_container li a img {
+#wrap footer .sns .icon .icon_container li a img {
   width: 100%;
 }
 
 main {
   padding-top: 99px;
 }
+main section {
+  margin-bottom: 150px;
+}
 main h2 { /* 섹션 타이틀  */
   font-weight: 600;
   font-size: 1.625rem;
   text-align: center;
+  margin-bottom: 50px;
 }
 main .more { /* 전체보기 */
   font-size: 0.875rem;
   color: #626262;
-  text-align: end;
   display: inline-block;
-  width: 100%;
+  padding: 10px 0;
 }
-main .product_g { /* 제품 공통 */ }
+main .product_g { /* 제품 공통 */
+  text-align: start;
+  width: 300px;
+}
 main .product_g a {
   display: inline-block;
 }
@@ -172,16 +186,34 @@ main .product_g .product_price {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  align-items: start;
+  justify-content: space-between;
   margin-bottom: 5px;
+}
+main .product_g .product_price p {
+  font-size: 0.625rem;
 }
 main .product_g .product_price .price {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  gap: 5px;
+}
+main .product_g .product_price .price em {
+  font-weight: 500;
+  font-size: 1rem;
 }
 main .product_g .review {
   margin: 12px 0 18px;
+}
+main .product_g .review span {
+  width: 13px;
+  display: inline-block;
+}
+main .product_g .review span img {
+  width: 100%;
+}
+main .product_g .review a {
+  font-size: 0.75rem;
 }
 main #bnr .bnr_g .bnr_container .bnr1 a, main #bnr .bnr_g .bnr_container .bnr3 a {
   background-repeat: no-repeat;
@@ -199,18 +231,288 @@ main #bnr .bnr_g .bnr_container .bnr2 a, main #bnr .bnr_g .bnr_container .bnr4 a
   display: inline-block;
 }
 main #best_seller {
-  padding: 0 96px;
+  position: relative;
+  width: 1650px;
+  margin: 150px auto;
+  padding-bottom: 30px;
 }
-main #best_seller .best_g .best_container .swiper-slide {
-  width: 300px;
-  margin: 0 15px 0;
+main #best_seller .best_g {
+  width: 1620px;
+  text-align: end;
+}
+main #best_seller .best_control .swiper-button-prev, main #best_seller .best_control .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  color: #121212;
+}
+main #best_seller .best_control .swiper-button-prev {
+  left: -45px;
+  top: 50%;
+}
+main #best_seller .best_control .swiper-button-next {
+  right: -45px;
+  top: 50%;
+}
+main #best_seller .best_control .swiper-scrollbar {
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 3px;
+}
+main #best_seller .best_control .swiper-scrollbar-horizontal {
+  border-radius: 3px;
+}
+main #best_seller .best_control .swiper-scrollbar-drag {
+  background-color: #1a2867;
+  border-radius: 3px;
 }
 main #with_pethroom .with_container {
+  margin: 0 auto;
+  width: 1502px;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   gap: 1px;
   align-items: start;
+}
+main #with_pethroom .with_container .delivery, main #with_pethroom .with_container .vip_membership, main #with_pethroom .with_container .smart_care {
+  text-align: center;
+}
+main #with_pethroom .with_container .delivery a, main #with_pethroom .with_container .vip_membership a, main #with_pethroom .with_container .smart_care a {
+  width: 500px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+main #with_pethroom .with_container .delivery a img, main #with_pethroom .with_container .vip_membership a img, main #with_pethroom .with_container .smart_care a img {
+  width: 100%;
+}
+main #with_pethroom .with_container .delivery h5, main #with_pethroom .with_container .vip_membership h5, main #with_pethroom .with_container .smart_care h5 {
+  font-weight: 500;
+  font-size: 0.875rem;
+  margin-bottom: 18px;
+}
+main #with_pethroom .with_container .delivery p, main #with_pethroom .with_container .vip_membership p, main #with_pethroom .with_container .smart_care p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+main #vip_bnr a {
+  display: inline-block;
+  width: 100%;
+}
+main #vip_bnr a img {
+  width: 100%;
+}
+main #for_dog, main #for_cat {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-items: start;
+  gap: 50px;
+  justify-content: center;
+}
+main #for_dog .for_g, main #for_cat .for_g {
+  position: relative;
+  margin: 0 60px;
+  height: 854px;
+}
+main #for_dog .for_title, main #for_cat .for_title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 810px;
+}
+main #for_dog .for_title h2, main #for_cat .for_title h2 {
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+main #for_dog .for_title .more, main #for_cat .for_title .more {
+  width: 49px;
+  padding: 0;
+}
+main #for_dog .for_container, main #for_cat .for_container {
+  width: 810px;
+}
+main #for_dog .for_container .swiper-slide, main #for_cat .for_container .swiper-slide {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 15px;
+}
+main #for_dog .for_container .for_inner, main #for_cat .for_container .for_inner {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 30px;
+}
+main #for_dog .for_container .for_inner > .product_g, main #for_cat .for_container .for_inner > .product_g {
+  width: 250px;
+}
+main #for_dog .for_control .swiper-button-prev, main #for_dog .for_control .swiper-button-next, main #for_cat .for_control .swiper-button-prev, main #for_cat .for_control .swiper-button-next {
+  width: 30px;
+  height: 30px;
+  color: #121212;
+}
+main #for_dog .for_control .swiper-button-prev, main #for_cat .for_control .swiper-button-prev {
+  left: -60px;
+  top: 50%;
+}
+main #for_dog .for_control .swiper-button-next, main #for_cat .for_control .swiper-button-next {
+  right: -60px;
+  top: 50%;
+}
+main #for_dog .for_control .swiper-scrollbar, main #for_cat .for_control .swiper-scrollbar {
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 3px;
+}
+main #for_dog .for_control .swiper-scrollbar-horizontal, main #for_cat .for_control .swiper-scrollbar-horizontal {
+  border-radius: 3px;
+}
+main #for_dog .for_control .swiper-scrollbar-drag, main #for_cat .for_control .swiper-scrollbar-drag {
+  background-color: #1a2867;
+  border-radius: 3px;
+}
+main #smart_care_pethroom {
+  background-image: url(../images/6bg.jpg);
+  width: 100%;
+  height: 530px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+main #smart_care_pethroom .smart_care_info {
+  white-space: nowrap;
+  text-align: center;
+}
+main #smart_care_pethroom .smart_care_info dt {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+main #smart_care_pethroom .smart_care_info dd {
+  font-weight: 500;
+  line-height: 1.5;
+}
+main #smart_care_pethroom .smart_care_container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 10px;
+}
+main #smart_care_pethroom .smart_care_container .smart_product {
+  text-align: start;
+  width: 315px;
+  height: 430px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main #smart_care_pethroom .smart_care_container .smart_product dl {
+  color: #fff;
+  padding: 40px;
+}
+main #smart_care_pethroom .smart_care_container .smart_product dl > dt {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main #smart_care_pethroom .smart_care_container .smart_product dl > dd {
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+main #smart_care_pethroom .smart_care_container .loopoo_box {
+  background-image: url(../images/smartcare1.png);
+}
+main #smart_care_pethroom .smart_care_container .water_dispenser {
+  background-image: url(../images/smartcare2.png);
+}
+main #smart_care_pethroom .smart_care_container .loopoo_box {
+  background-image: url(../images/smartcare3.png);
+}
+main #about {
+  position: relative;
+  background-image: url(../images/about_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 751px;
+}
+main #about::after {
+  content: "";
+  height: 50px;
+  background-color: #fff;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main #about h2 {
+  padding: 220px 0 91px;
+  color: #fff;
+  margin: 0;
+}
+main #about::before {
+  content: "";
+  width: 100%;
+  height: 214px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+main #about .about_container {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 1202px;
+}
+main #about .about_container .about_img img {
+  width: 100%;
+}
+main #about .about_inner {
+  padding: 66px 20px 0 20px;
+  margin: 0 auto;
+  width: 601px;
+  background-color: #fff;
+  height: 400px;
+}
+main #about .about_inner p {
+  margin-bottom: 30px;
+}
+main #about .about_inner p em {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+main #about .about_inner .about_info {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+main #about .about_inner .the_more {
+  border: 1px solid #dadada;
+  width: 89px;
+  height: 34px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+main #about .about_inner .the_more a {
+  font-size: 0.75rem;
+}
+main #about .about_inner .the_more span {
+  width: 10px;
+  display: inline-block;
+}
+main #about .about_inner .the_more span img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
