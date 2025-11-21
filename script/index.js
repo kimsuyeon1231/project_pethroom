@@ -1,3 +1,14 @@
+/* 배너 */
+const bnrSlide = new Swiper('#bnr .swiper',{
+    loop : true,
+    centeredSlides: true,
+    pagination: {
+        el: "#bnr .swiper-pagination",
+        clickable: true, 
+    },
+    autoplay : {delay:3000,},
+    })
+
 /* 베스트셀러 */
 const bestSeller = new Swiper('#best_seller .swiper',{
     slidesPerView : 5,
@@ -13,7 +24,6 @@ const bestSeller = new Swiper('#best_seller .swiper',{
         draggable: true,
         dragSize: 'auto',
     },
-    autoplay : {delay:3000,},
     })
 
 /* 포 도그 */
@@ -30,7 +40,6 @@ const forDogSeller = new Swiper('#for_dog .swiper',{
         draggable: true,
         dragSize: 'auto',
     },
-    autoplay : {delay:3000,},
     })
 
 /* 포 캣 */
@@ -47,5 +56,6 @@ const forCatSeller = new Swiper('#for_cat .swiper',{
         draggable: true,
         dragSize: 'auto',
     },
-    autoplay : {delay:3000,},
     })
+
+/* 어바웃 */

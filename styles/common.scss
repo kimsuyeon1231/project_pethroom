@@ -47,24 +47,53 @@ $color-darkgray:#313131;
             a:not(.cart) {margin-right: 25px;}
         }
     }
-    nav {  padding: 0 96px; background-color: $color-white;
+    nav {  padding: 0 96px; background-color: $color-white; border-bottom: 1px solid $color-gray-da;
         .gnb {position: relative;
             @include flex-row; align-items: start; gap: 80px;
             .gnb_a {
-                &:hover {text-decoration: underline; text-underline-offset: 7px;/* 텍스트와 밑줄 공간 */}
                 font-weight: $font-width-semibold; display:inline-block; line-height: 50px;
             }
             .lnb {@include flex-col; gap: 25px; align-items: start; padding: 30px;
-                background-color: none; background-color: $color-white; display: none;
+                background-color: none; background-color: $color-white; display: none; border: 1px solid $color-gray-da; border-top: 0;
                 position: absolute;
                 li {
                     a {font-size: $font-size14; white-space: nowrap;}
                 }
             }
         }
-        .product_gnb:hover {>.lnb {display: flex; left: -43px;}}
-        .membership_gnb:hover {>.lnb {display: flex; left: 143.5px;}}
-        /* .about_gnb:hover {>.lnb {display: flex; left: 293px;}} */
+        .product_gnb {&>.lnb {width: 200px;}}
+        .membership_gnb {&>.lnb {width: 155px;}}
+        .about_gnb {&>.lnb {width: 135px;}}
+        .community_gnb {&>.lnb {width: 173px;}}
+        .product_gnb:hover {
+            >.lnb {
+                display: flex; left: -30px;
+                li:hover {
+                    a {font-size: 0.938rem; font-weight: $font-width-mediun;}
+                }
+            }
+        }
+        .membership_gnb:hover {
+            >.lnb {display: flex; left: 130px;
+                li:hover {
+                    a {font-size: 0.938rem; font-weight: $font-width-mediun;}
+                }
+            }
+        }
+        .about_gnb:hover {
+            >.lnb {display: flex; left: 301px;
+                li:hover {
+                    a {font-size: 0.938rem; font-weight: $font-width-mediun;}
+                }
+            }
+        }
+        .community_gnb:hover {
+            >.lnb {display: flex; left: 437px;
+                li:hover {
+                    a {font-size: 0.938rem; font-weight: $font-width-mediun;}
+                }
+            }
+        }
     }
 }
 footer { border-top: 1px solid $color-gray-da;
@@ -95,6 +124,5 @@ footer { border-top: 1px solid $color-gray-da;
         }
     }
 }
-
 }
 

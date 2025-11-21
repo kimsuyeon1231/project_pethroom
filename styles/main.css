@@ -29,6 +29,7 @@
 #wrap header nav {
   padding: 0 96px;
   background-color: #fff;
+  border-bottom: 1px solid #dadada;
 }
 #wrap header nav .gnb {
   position: relative;
@@ -37,10 +38,6 @@
   align-items: center;
   align-items: start;
   gap: 80px;
-}
-#wrap header nav .gnb .gnb_a:hover {
-  text-decoration: underline;
-  text-underline-offset: 7px; /* 텍스트와 밑줄 공간 */
 }
 #wrap header nav .gnb .gnb_a {
   font-weight: 600;
@@ -57,22 +54,57 @@
   background-color: none;
   background-color: #fff;
   display: none;
+  border: 1px solid #dadada;
+  border-top: 0;
   position: absolute;
 }
 #wrap header nav .gnb .lnb li a {
   font-size: 0.875rem;
   white-space: nowrap;
 }
+#wrap header nav .product_gnb > .lnb {
+  width: 200px;
+}
+#wrap header nav .membership_gnb > .lnb {
+  width: 155px;
+}
+#wrap header nav .about_gnb > .lnb {
+  width: 135px;
+}
+#wrap header nav .community_gnb > .lnb {
+  width: 173px;
+}
 #wrap header nav .product_gnb:hover > .lnb {
   display: flex;
-  left: -43px;
+  left: -30px;
+}
+#wrap header nav .product_gnb:hover > .lnb li:hover a {
+  font-size: 0.938rem;
+  font-weight: 500;
 }
 #wrap header nav .membership_gnb:hover > .lnb {
   display: flex;
-  left: 143.5px;
+  left: 130px;
 }
-#wrap header nav {
-  /* .about_gnb:hover {>.lnb {display: flex; left: 293px;}} */
+#wrap header nav .membership_gnb:hover > .lnb li:hover a {
+  font-size: 0.938rem;
+  font-weight: 500;
+}
+#wrap header nav .about_gnb:hover > .lnb {
+  display: flex;
+  left: 301px;
+}
+#wrap header nav .about_gnb:hover > .lnb li:hover a {
+  font-size: 0.938rem;
+  font-weight: 500;
+}
+#wrap header nav .community_gnb:hover > .lnb {
+  display: flex;
+  left: 437px;
+}
+#wrap header nav .community_gnb:hover > .lnb li:hover a {
+  font-size: 0.938rem;
+  font-weight: 500;
 }
 #wrap footer {
   border-top: 1px solid #dadada;
@@ -126,6 +158,7 @@
 
 main {
   padding-top: 99px;
+  /* 공통 */
 }
 main section {
   margin-bottom: 150px;
@@ -190,7 +223,7 @@ main .product_g .product_price {
   margin-bottom: 5px;
 }
 main .product_g .product_price p {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
 }
 main .product_g .product_price .price {
   display: flex;
@@ -215,7 +248,13 @@ main .product_g .review span img {
 main .product_g .review a {
   font-size: 0.75rem;
 }
-main #bnr .bnr_g .bnr_container .bnr1 a, main #bnr .bnr_g .bnr_container .bnr3 a {
+main {
+  /* 레이아웃별 시작 */
+}
+main #bnr {
+  position: relative;
+}
+main #bnr .bnr_g .bnr_container .bnr1 > a, main #bnr .bnr_g .bnr_container .bnr3 > a {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -224,11 +263,27 @@ main #bnr .bnr_g .bnr_container .bnr1 a, main #bnr .bnr_g .bnr_container .bnr3 a
   height: 700px;
   display: inline-block;
 }
-main #bnr .bnr_g .bnr_container .bnr2 a, main #bnr .bnr_g .bnr_container .bnr4 a {
+main #bnr .bnr_g .bnr_container .bnr2 > a, main #bnr .bnr_g .bnr_container .bnr4 > a {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-image: url(../images/bnr2.jpg);
   width: 100%;
   height: 700px;
   display: inline-block;
+}
+main #bnr .swiper-pagination {
+  bottom: 20px;
+}
+main #bnr .swiper-pagination-bullet {
+  margin: 0 10px;
+  width: 10px;
+  height: 10px;
+}
+main #bnr .swiper-pagination-bullet-active {
+  width: 16px;
+  border-radius: 5px;
+  background-color: #121212;
 }
 main #best_seller {
   position: relative;
@@ -288,7 +343,6 @@ main #with_pethroom .with_container .delivery a img, main #with_pethroom .with_c
 }
 main #with_pethroom .with_container .delivery h5, main #with_pethroom .with_container .vip_membership h5, main #with_pethroom .with_container .smart_care h5 {
   font-weight: 500;
-  font-size: 0.875rem;
   margin-bottom: 18px;
 }
 main #with_pethroom .with_container .delivery p, main #with_pethroom .with_container .vip_membership p, main #with_pethroom .with_container .smart_care p {
@@ -382,7 +436,7 @@ main #smart_care_pethroom {
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 140px;
 }
 main #smart_care_pethroom .smart_care_info {
   white-space: nowrap;
@@ -453,6 +507,7 @@ main #about h2 {
   padding: 220px 0 91px;
   color: #fff;
   margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 main #about::before {
   content: "";
@@ -513,6 +568,23 @@ main #about .about_inner .the_more span {
 }
 main #about .about_inner .the_more span img {
   width: 100%;
+}
+
+@keyframes with_1_3 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes with_2 {
+  0% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
